@@ -5,6 +5,8 @@ import org.junit.*;
 public class PhotographerTest {
   Photographer photographer;
   Camera camera;
+  AnalogCamera analogcamera;
+  DigitalCamera digitalcamera;
 
 @Before 
 public void before() {
@@ -22,6 +24,19 @@ public void startsWithNoCamera() {
   assertEquals(0, photographer.cameraCount());
 }
 
+@Test
+public void canAddCamera() {
+  photographer.addCamera(camera);
+  assertEquals(1, photographer.cameraCount());
+  }
+
+ @Test 
+ public void canRemoveCamera() {
+  photographer.addCamera(camera);
+  photographer.removeCamera();
+  assertEquals(0, photographer.cameraCount());
+ }
+ 
 
 
 }
