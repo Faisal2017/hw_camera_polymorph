@@ -37,6 +37,11 @@ public void canAddCamera() {
   assertEquals(0, photographer.cameraCount());
  }
  
-
+ @Test
+ public void photographerCanGetCameraDetails() {
+   photographer.addCamera(analogcamera);
+   photographer.addCamera(digitalcamera);
+   assertEquals("Sony ILCE5100L, No noise reduciton, Lo-resolution Nikon 34T, Noise reduction filter, Hi-resolution", )
+ }
 
 }
